@@ -1,0 +1,25 @@
+{
+  "name": "survey-share-proof",
+  "version": "1.0.0",
+  "description": "Survey sharing proof and masked leaderboard web app",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "survey",
+    "leaderboard",
+    "proof"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^2.1.1"
+  }
+}
