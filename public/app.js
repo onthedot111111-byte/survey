@@ -136,7 +136,7 @@ function renderLeaderboard(target, entries, compact = false) {
         <span class="rank-number">${item.rank}</span>
         <span class="person">
           <strong>${escapeHtml(item.maskedName)}</strong>
-          <span>#${escapeHtml(item.participantCode)} · 인증 ${item.proofCount}건</span>
+          <span>전화번호 끝 4자리 ${escapeHtml(item.phoneLast4)} · 인증 ${item.proofCount}건</span>
         </span>
         <span class="count">
           ${item.approvedCount}

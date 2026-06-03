@@ -74,8 +74,9 @@ function normalizeTargetKey(target) {
   return String(target || "").trim().toLowerCase().replace(/\s+/g, "");
 }
 
-function publicCode(phone) {
-  return crypto.createHash("sha256").update(String(phone || "")).digest("hex").slice(0, 4).toUpperCase();
+function phoneLast4(phone) {
+  const clean = normalizePhone(phone);
+  return clean.slice(-4).padStart(4, "0");
 }
 
 function getSubmissionPhotos(item) {
@@ -192,7 +193,7 @@ function buildLeaderboard(submissions) {
     .map((item, index) => ({
       rank: index + 1,
       maskedName: maskName(item.name),
-      participantCode: publicCode(item.phone),
+      phoneLast4: phoneLast4(item.phone),
       approvedCount: item.approvedCount,
       proofCount: item.proofCount,
       prizeCandidate: index < 3
