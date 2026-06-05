@@ -13,3 +13,9 @@ services:
         sync: false
       - key: MAX_UPLOAD_MB
         value: "8"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_BUCKET
+        value: proof-photos
